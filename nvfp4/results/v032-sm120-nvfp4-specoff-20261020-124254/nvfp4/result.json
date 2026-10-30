@@ -1,0 +1,348 @@
+{
+  "arm": "nvfp4",
+  "stage": 1,
+  "backend": "FLASHINFER",
+  "gpu_uuid": "<GPU_UUID>",
+  "model": "<PROJECT_ROOT>/models/Qwen3.8-27B-NVFP4-RTX5090-pre-final",
+  "draft": "",
+  "spec": "off",
+  "prefix_cache": false,
+  "gpu_util": "0.93",
+  "prefill_budget": 2048,
+  "max_seqs": 1,
+  "host_limit_bytes": 48000000000,
+  "compiler_concurrency": 4,
+  "tests": {
+    "boot": {
+      "status": "PASS",
+      "result": {
+        "max_model_len": 262144,
+        "models": {
+          "object": "list",
+          "data": [
+            {
+              "id": "qwen3.8-27b",
+              "object": "model",
+              "created": 1792495928,
+              "owned_by": "vllm",
+              "root": "<PROJECT_ROOT>/models/Qwen3.8-27B-NVFP4-RTX5090-pre-final",
+              "parent": null,
+              "max_model_len": 262144,
+              "permission": [
+                {
+                  "id": "modelperm-afaaf1b03c6ef088",
+                  "object": "model_permission",
+                  "created": 1792495928,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ]
+            }
+          ]
+        },
+        "model_gib": 13.49,
+        "kv_gib": 7.24,
+        "pool_tokens": 412737
+      },
+      "elapsed_s": 170.02
+    },
+    "correctness-smoke": {
+      "status": "PASS",
+      "result": {
+        "prompt": "sqrt(144)",
+        "response": "12",
+        "status": "PASS"
+      },
+      "elapsed_s": 0.18
+    },
+    "kld-distribution": {
+      "status": "PASS",
+      "result": {
+        "prompts_evaluated": 5,
+        "total_positions": 946,
+        "top1_agreement": 0.8826638477801269,
+        "mean_kld": 0.04568661007931966,
+        "max_kld": 0.9608257081920429,
+        "gate_passed": true
+      },
+      "elapsed_s": 1.64
+    },
+    "gsm8k-200-greedy": {
+      "status": "PASS",
+      "result": {
+        "n": 200,
+        "correct": 193,
+        "acc": 0.965,
+        "accuracy_percent": 96.5,
+        "truncations": 5,
+        "bad_answers": 7,
+        "mean_tokens": 371.63,
+        "profile": "greedy",
+        "threshold": 190,
+        "gate_passed": true
+      },
+      "elapsed_s": 3021.39
+    },
+    "ppl-en": {
+      "status": "PASS",
+      "result": {
+        "ppl": 11.190983169301107,
+        "tokens": 11175,
+        "sum_logprob": -26988.836145217734
+      },
+      "elapsed_s": 8.17
+    },
+    "ppl-de": {
+      "status": "PASS",
+      "result": {
+        "ppl": 10.357342324587695,
+        "tokens": 11888,
+        "sum_logprob": -27790.526143333776
+      },
+      "elapsed_s": 8.2
+    },
+    "ppl-el": {
+      "status": "PASS",
+      "result": {
+        "ppl": 5.42032006509726,
+        "tokens": 17761,
+        "sum_logprob": -30018.840580513956
+      },
+      "elapsed_s": 8.26
+    },
+    "ppl-code": {
+      "status": "PASS",
+      "result": {
+        "ppl": 3.84916536812272,
+        "tokens": 7573,
+        "sum_logprob": -10207.316042352406
+      },
+      "elapsed_s": 5.12
+    },
+    "tg-greedy": {
+      "status": "PASS",
+      "result": {
+        "planned_passes": [
+          {
+            "output_tps": 24.74,
+            "ttft_ms": 176.79,
+            "tpot_ms": 40.29,
+            "decode_tps": 24.82005460412013
+          },
+          {
+            "output_tps": 24.73,
+            "ttft_ms": 184.41,
+            "tpot_ms": 40.28,
+            "decode_tps": 24.826216484607745
+          }
+        ],
+        "retained_pass": 2,
+        "output_tps": 24.73,
+        "ttft_ms": 184.41,
+        "tpot_ms": 40.28,
+        "decode_tps": 24.826216484607745,
+        "profile": {
+          "temperature": 0.0,
+          "top_p": 1.0,
+          "top_k": -1,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "repetition_penalty": 1.0,
+          "enable_thinking": false
+        }
+      },
+      "elapsed_s": 646.09
+    },
+    "tg-instruct": {
+      "status": "PASS",
+      "result": {
+        "planned_passes": [
+          {
+            "output_tps": 24.62,
+            "ttft_ms": 179.04,
+            "tpot_ms": 40.49,
+            "decode_tps": 24.69745616201531
+          },
+          {
+            "output_tps": 24.63,
+            "ttft_ms": 171.53,
+            "tpot_ms": 40.46,
+            "decode_tps": 24.715768660405338
+          }
+        ],
+        "retained_pass": 2,
+        "output_tps": 24.63,
+        "ttft_ms": 171.53,
+        "tpot_ms": 40.46,
+        "decode_tps": 24.715768660405338,
+        "profile": {
+          "temperature": 0.7,
+          "top_p": 0.8,
+          "top_k": 20,
+          "min_p": 0.0,
+          "presence_penalty": 1.5,
+          "repetition_penalty": 1.0,
+          "enable_thinking": false
+        }
+      },
+      "elapsed_s": 659.04
+    },
+    "pp-1024": {
+      "status": "PASS",
+      "result": {
+        "trials": [
+          {
+            "elapsed_s": 0.3591092819988262,
+            "tps": 2851.499672468358
+          },
+          {
+            "elapsed_s": 0.32393510900146794,
+            "tps": 3161.1269403816295
+          },
+          {
+            "elapsed_s": 0.32824304600217147,
+            "tps": 3119.639585580819
+          }
+        ],
+        "median_tps": 3119.639585580819
+      },
+      "elapsed_s": 1.01
+    },
+    "pp-16384": {
+      "status": "PASS",
+      "result": {
+        "trials": [
+          {
+            "elapsed_s": 6.7580233109983965,
+            "tps": 2424.3775503608776
+          },
+          {
+            "elapsed_s": 6.657308768997609,
+            "tps": 2461.054544487793
+          },
+          {
+            "elapsed_s": 6.6698198830017645,
+            "tps": 2456.438147865899
+          }
+        ],
+        "median_tps": 2456.438147865899
+      },
+      "elapsed_s": 20.09
+    },
+    "pp-65536": {
+      "status": "PASS",
+      "result": {
+        "trials": [
+          {
+            "elapsed_s": 49.842586455000855,
+            "tps": 1314.8394708442077
+          },
+          {
+            "elapsed_s": 50.08202549899943,
+            "tps": 1308.5533052434012
+          },
+          {
+            "elapsed_s": 49.95686104199922,
+            "tps": 1311.8318211567394
+          }
+        ],
+        "median_tps": 1311.8318211567394
+      },
+      "elapsed_s": 149.88
+    },
+    "occupied-1024": {
+      "status": "PASS",
+      "result": {
+        "target_context": 1024,
+        "prompt_tokens": 523,
+        "completion_tokens": 77,
+        "final_context_tokens": 600,
+        "elapsed_s": 3.287,
+        "output_tps": 23.43,
+        "sample_output": "The quiet archive preserves **the unremarkable rhythms of existence: the fluctuating barometric pressures of a Tuesday a",
+        "status": "PASS"
+      },
+      "elapsed_s": 3.29
+    },
+    "occupied-65536": {
+      "status": "PASS",
+      "result": {
+        "target_context": 65536,
+        "prompt_tokens": 65035,
+        "completion_tokens": 39,
+        "final_context_tokens": 65074,
+        "elapsed_s": 51.109,
+        "output_tps": 0.76,
+        "sample_output": "The quiet archive preserves **the unassuming chronicles of daily life: meticulous weather logs, itineraries of modest tr",
+        "status": "PASS"
+      },
+      "elapsed_s": 51.16
+    },
+    "occupied-131072": {
+      "status": "PASS",
+      "result": {
+        "target_context": 131072,
+        "prompt_tokens": 130571,
+        "completion_tokens": 40,
+        "final_context_tokens": 130611,
+        "elapsed_s": 161.807,
+        "output_tps": 0.25,
+        "sample_output": "The quiet archive preserves **the unassuming chronicle of human existence, meticulously cataloging the mundane rhythms o",
+        "status": "PASS"
+      },
+      "elapsed_s": 161.87
+    },
+    "retrieval-65536-0.5": {
+      "status": "PASS",
+      "result": {
+        "length": 65536,
+        "depth": 0.5,
+        "needle": "KEY50V032",
+        "response": "KEY50V032",
+        "elapsed_s": 50.27,
+        "gate_passed": true
+      },
+      "elapsed_s": 50.32
+    },
+    "retrieval-131072-0.5": {
+      "status": "PASS",
+      "result": {
+        "length": 131072,
+        "depth": 0.5,
+        "needle": "KEY50V032",
+        "response": "KEY50V032",
+        "elapsed_s": 161.07,
+        "gate_passed": true
+      },
+      "elapsed_s": 161.13
+    },
+    "qa-3fact-65536": {
+      "status": "FAILED",
+      "error": "QA 3-fact failed at length 65536: missing facts ['Elin', '19'] in response 'Based on the text provided, here are the leaders and budgets for the specified projects:\n\n*   **Project Amber**: Led by **Mira**, with a budget of **37 million credits**.\n*   **Project Cedar**: Led by **Tomas**, with a budget of **52 million credits**.'",
+      "elapsed_s": 52.9
+    }
+  },
+  "stack": "vLLM 0.32.0 / FlashInfer 0.7.0.post1",
+  "server_pid": 97680,
+  "admitted_context_tokens": 262144,
+  "kv_pool_tokens": 412737,
+  "tier": "qualification",
+  "combined_ppl": {
+    "ppl": 7.120981883004507,
+    "tokens": 48397
+  },
+  "server_left_running": null,
+  "sampled_peak_gpu_mib": 23304.0,
+  "aggregate_scope_host_peak_bytes": 11967172608,
+  "memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+  "memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+  "verified_occupied_context_tokens": 130611,
+  "status": "FAILED"
+}

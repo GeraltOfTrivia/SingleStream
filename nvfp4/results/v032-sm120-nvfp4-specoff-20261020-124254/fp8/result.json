@@ -1,0 +1,96 @@
+{
+  "arm": "fp8",
+  "stage": 1,
+  "backend": "FLASHINFER",
+  "gpu_uuid": "<GPU_UUID>",
+  "model": "<PROJECT_ROOT>/models/Qwen3.8-27B-NVFP4-RTX5090-pre-final",
+  "draft": "",
+  "spec": "off",
+  "prefix_cache": false,
+  "gpu_util": "0.93",
+  "prefill_budget": 2048,
+  "max_seqs": 1,
+  "host_limit_bytes": 48000000000,
+  "compiler_concurrency": 4,
+  "tests": {
+    "boot": {
+      "status": "PASS",
+      "result": {
+        "max_model_len": 233600,
+        "models": {
+          "object": "list",
+          "data": [
+            {
+              "id": "qwen3.8-27b",
+              "object": "model",
+              "created": 1792492750,
+              "owned_by": "vllm",
+              "root": "<PROJECT_ROOT>/models/Qwen3.8-27B-NVFP4-RTX5090-pre-final",
+              "parent": null,
+              "max_model_len": 233600,
+              "permission": [
+                {
+                  "id": "modelperm-999fa254c680e83f",
+                  "object": "model_permission",
+                  "created": 1792492750,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ]
+            }
+          ]
+        },
+        "model_gib": 13.49,
+        "kv_gib": 7.24,
+        "pool_tokens": 234391
+      },
+      "elapsed_s": 170.02
+    },
+    "correctness-smoke": {
+      "status": "PASS",
+      "result": {
+        "prompt": "sqrt(144)",
+        "response": "12",
+        "status": "PASS"
+      },
+      "elapsed_s": 0.18
+    },
+    "kld-distribution": {
+      "status": "PASS",
+      "result": {
+        "prompts_evaluated": 5,
+        "total_positions": 946,
+        "top1_agreement": 0.912262156448203,
+        "mean_kld": 0.029577345007619323,
+        "max_kld": 1.5728428558602066,
+        "gate_passed": true
+      },
+      "elapsed_s": 1.66
+    },
+    "gsm8k-200-greedy": {
+      "status": "FAILED",
+      "error": "GSM8K gate failed: 189/200 < required threshold 190",
+      "elapsed_s": 3004.77
+    }
+  },
+  "stack": "vLLM 0.32.0 / FlashInfer 0.7.0.post1",
+  "server_pid": 88020,
+  "admitted_context_tokens": 233600,
+  "kv_pool_tokens": 234391,
+  "tier": "qualification",
+  "blocked": "Quality gate failed on greedy (<190/200)",
+  "server_left_running": null,
+  "sampled_peak_gpu_mib": 23224.0,
+  "aggregate_scope_host_peak_bytes": 11514236928,
+  "memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+  "memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+  "verified_occupied_context_tokens": null,
+  "status": "FAILED"
+}

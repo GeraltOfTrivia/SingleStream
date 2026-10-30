@@ -1,0 +1,17 @@
+{
+  "stage": 1,
+  "state": "COMPLETE",
+  "arms": [
+    "fp8"
+  ],
+  "run_started_at": 1792469200.631448,
+  "updated_at": 1792471713.7039685,
+  "arm_index": 1,
+  "arm_count": 1,
+  "test": null,
+  "completed_samples": 200,
+  "total_samples": 200,
+  "correct_answers": 189,
+  "truncated_answers": 19,
+  "completed_arms": 1
+}

@@ -1,0 +1,883 @@
+{
+  "scope": "Selected diagnostic evidence for the 48 GB benchmark dossiers; no raw evaluation text.",
+  "sources": [
+    {
+      "id": "D01",
+      "record_name": "nvfp4-fast-cache-baseline.json",
+      "sha256": "f2b0d5cf6ea816f1fd69c6b1afae6f8755127f7608b61287de77b1edc0c116f8",
+      "availability": "Private source; not included"
+    },
+    {
+      "id": "D02",
+      "record_name": "w4a16-cache-baseline.json",
+      "sha256": "b67fc601e7630aced2e13a2ba8686a9cf9dc9baacf9d080345ddc0c8cd647d99",
+      "availability": "Private source; not included"
+    },
+    {
+      "id": "D03",
+      "record_name": "w4a16-prefix-isolation.json",
+      "sha256": "40c65cb2290ad984eb88c7370f2cfb3ad1f47e3dc8d99ca679ced28ff72a55e9",
+      "availability": "Private source; not included"
+    },
+    {
+      "id": "D04",
+      "record_name": "fp8-reference-comparisons.json",
+      "sha256": "284b0b24f926e41ecd130a8347b727049492d0e40f17c9e688343a757a1b26d4",
+      "availability": "Private source; not included"
+    },
+    {
+      "id": "D05",
+      "record_name": "result.json",
+      "sha256": "cfb9db1085f071fdba6b2bb64d35acfb29081cc03bf2d32826d92b41e47c097d",
+      "availability": "Private source; not included"
+    },
+    {
+      "id": "D06",
+      "record_name": "summary.json",
+      "sha256": "6548ea48626afe7bd1c35a09c4e7ad0ea37222a1cd527c77f760b051f55cebb1",
+      "availability": "Private source; not included"
+    }
+  ],
+  "claims": [
+    {
+      "id": "DC001",
+      "source_id": "D01",
+      "source_json_pointer": "/0/label",
+      "value": "nvfp4-mtp-prefix0"
+    },
+    {
+      "id": "DC002",
+      "source_id": "D01",
+      "source_json_pointer": "/0/free_generation/unique_outputs",
+      "value": 4
+    },
+    {
+      "id": "DC003",
+      "source_id": "D01",
+      "source_json_pointer": "/0/free_generation/cached_tokens",
+      "value": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "DC004",
+      "source_id": "D01",
+      "source_json_pointer": "/0/fixed_continuation",
+      "value": {
+        "matches": 16,
+        "probes": 18
+      },
+      "derivation": "Count true first_repeat1.same_top1 across array"
+    },
+    {
+      "id": "DC005",
+      "source_id": "D01",
+      "source_json_pointer": "/0/fixed_continuation",
+      "value": {
+        "matches": 18,
+        "probes": 18
+      },
+      "derivation": "Count true repeat1_repeat2.same_top1 across array"
+    },
+    {
+      "id": "DC006",
+      "source_id": "D01",
+      "source_json_pointer": "/1/label",
+      "value": "nvfp4-mtp-prefix1"
+    },
+    {
+      "id": "DC007",
+      "source_id": "D01",
+      "source_json_pointer": "/1/free_generation/unique_outputs",
+      "value": 5
+    },
+    {
+      "id": "DC008",
+      "source_id": "D01",
+      "source_json_pointer": "/1/free_generation/cached_tokens",
+      "value": [
+        0,
+        30000,
+        0,
+        30000,
+        0,
+        30000
+      ]
+    },
+    {
+      "id": "DC009",
+      "source_id": "D01",
+      "source_json_pointer": "/1/fixed_continuation",
+      "value": {
+        "matches": 17,
+        "probes": 18
+      },
+      "derivation": "Count true first_repeat1.same_top1 across array"
+    },
+    {
+      "id": "DC010",
+      "source_id": "D01",
+      "source_json_pointer": "/1/fixed_continuation",
+      "value": {
+        "matches": 16,
+        "probes": 18
+      },
+      "derivation": "Count true repeat1_repeat2.same_top1 across array"
+    },
+    {
+      "id": "DC011",
+      "source_id": "D02",
+      "source_json_pointer": "/0/label",
+      "value": "bfloat16-off-prefix0"
+    },
+    {
+      "id": "DC012",
+      "source_id": "D02",
+      "source_json_pointer": "/0/free_generation/unique_outputs",
+      "value": 3
+    },
+    {
+      "id": "DC013",
+      "source_id": "D02",
+      "source_json_pointer": "/0/free_generation/cached_tokens",
+      "value": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "DC014",
+      "source_id": "D02",
+      "source_json_pointer": "/0/fixed_continuation",
+      "value": {
+        "matches": 16,
+        "probes": 18
+      },
+      "derivation": "Count true first_repeat1.same_top1 across array"
+    },
+    {
+      "id": "DC015",
+      "source_id": "D02",
+      "source_json_pointer": "/0/fixed_continuation",
+      "value": {
+        "matches": 18,
+        "probes": 18
+      },
+      "derivation": "Count true repeat1_repeat2.same_top1 across array"
+    },
+    {
+      "id": "DC016",
+      "source_id": "D02",
+      "source_json_pointer": "/1/label",
+      "value": "bfloat16-off-prefix1"
+    },
+    {
+      "id": "DC017",
+      "source_id": "D02",
+      "source_json_pointer": "/1/free_generation/unique_outputs",
+      "value": 4
+    },
+    {
+      "id": "DC018",
+      "source_id": "D02",
+      "source_json_pointer": "/1/free_generation/cached_tokens",
+      "value": [
+        0,
+        32640,
+        0,
+        32640,
+        0,
+        32640
+      ]
+    },
+    {
+      "id": "DC019",
+      "source_id": "D02",
+      "source_json_pointer": "/1/fixed_continuation",
+      "value": {
+        "matches": 17,
+        "probes": 18
+      },
+      "derivation": "Count true first_repeat1.same_top1 across array"
+    },
+    {
+      "id": "DC020",
+      "source_id": "D02",
+      "source_json_pointer": "/1/fixed_continuation",
+      "value": {
+        "matches": 18,
+        "probes": 18
+      },
+      "derivation": "Count true repeat1_repeat2.same_top1 across array"
+    },
+    {
+      "id": "DC021",
+      "source_id": "D02",
+      "source_json_pointer": "/2/label",
+      "value": "nvfp4-off-prefix0"
+    },
+    {
+      "id": "DC022",
+      "source_id": "D02",
+      "source_json_pointer": "/2/free_generation/unique_outputs",
+      "value": 3
+    },
+    {
+      "id": "DC023",
+      "source_id": "D02",
+      "source_json_pointer": "/2/free_generation/cached_tokens",
+      "value": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "DC024",
+      "source_id": "D02",
+      "source_json_pointer": "/2/fixed_continuation",
+      "value": {
+        "matches": 15,
+        "probes": 18
+      },
+      "derivation": "Count true first_repeat1.same_top1 across array"
+    },
+    {
+      "id": "DC025",
+      "source_id": "D02",
+      "source_json_pointer": "/2/fixed_continuation",
+      "value": {
+        "matches": 17,
+        "probes": 18
+      },
+      "derivation": "Count true repeat1_repeat2.same_top1 across array"
+    },
+    {
+      "id": "DC026",
+      "source_id": "D02",
+      "source_json_pointer": "/3/label",
+      "value": "nvfp4-off-prefix1"
+    },
+    {
+      "id": "DC027",
+      "source_id": "D02",
+      "source_json_pointer": "/3/free_generation/unique_outputs",
+      "value": 3
+    },
+    {
+      "id": "DC028",
+      "source_id": "D02",
+      "source_json_pointer": "/3/free_generation/cached_tokens",
+      "value": [
+        0,
+        32640,
+        0,
+        32640,
+        0,
+        32640
+      ]
+    },
+    {
+      "id": "DC029",
+      "source_id": "D02",
+      "source_json_pointer": "/3/fixed_continuation",
+      "value": {
+        "matches": 16,
+        "probes": 18
+      },
+      "derivation": "Count true first_repeat1.same_top1 across array"
+    },
+    {
+      "id": "DC030",
+      "source_id": "D02",
+      "source_json_pointer": "/3/fixed_continuation",
+      "value": {
+        "matches": 18,
+        "probes": 18
+      },
+      "derivation": "Count true repeat1_repeat2.same_top1 across array"
+    },
+    {
+      "id": "DC031",
+      "source_id": "D02",
+      "source_json_pointer": "/4/label",
+      "value": "nvfp4-dflash2-prefix0"
+    },
+    {
+      "id": "DC032",
+      "source_id": "D02",
+      "source_json_pointer": "/4/free_generation/unique_outputs",
+      "value": 5
+    },
+    {
+      "id": "DC033",
+      "source_id": "D02",
+      "source_json_pointer": "/4/free_generation/cached_tokens",
+      "value": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "DC034",
+      "source_id": "D02",
+      "source_json_pointer": "/4/fixed_continuation",
+      "value": {
+        "matches": 16,
+        "probes": 18
+      },
+      "derivation": "Count true first_repeat1.same_top1 across array"
+    },
+    {
+      "id": "DC035",
+      "source_id": "D02",
+      "source_json_pointer": "/4/fixed_continuation",
+      "value": {
+        "matches": 17,
+        "probes": 18
+      },
+      "derivation": "Count true repeat1_repeat2.same_top1 across array"
+    },
+    {
+      "id": "DC036",
+      "source_id": "D02",
+      "source_json_pointer": "/5/label",
+      "value": "nvfp4-dflash2-prefix1"
+    },
+    {
+      "id": "DC037",
+      "source_id": "D02",
+      "source_json_pointer": "/5/free_generation/unique_outputs",
+      "value": 5
+    },
+    {
+      "id": "DC038",
+      "source_id": "D02",
+      "source_json_pointer": "/5/free_generation/cached_tokens",
+      "value": [
+        0,
+        32704,
+        0,
+        32704,
+        0,
+        32704
+      ]
+    },
+    {
+      "id": "DC039",
+      "source_id": "D02",
+      "source_json_pointer": "/5/fixed_continuation",
+      "value": {
+        "matches": 18,
+        "probes": 18
+      },
+      "derivation": "Count true first_repeat1.same_top1 across array"
+    },
+    {
+      "id": "DC040",
+      "source_id": "D02",
+      "source_json_pointer": "/5/fixed_continuation",
+      "value": {
+        "matches": 18,
+        "probes": 18
+      },
+      "derivation": "Count true repeat1_repeat2.same_top1 across array"
+    },
+    {
+      "id": "DC041",
+      "source_id": "D03",
+      "source_json_pointer": "/0/label",
+      "value": "bfloat16-off-compiled-float16"
+    },
+    {
+      "id": "DC042",
+      "source_id": "D03",
+      "source_json_pointer": "/0/canonical/cold_warm_matches",
+      "value": [
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "id": "DC043",
+      "source_id": "D03",
+      "source_json_pointer": "/0/canonical/warm_warm_matches",
+      "value": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "DC044",
+      "source_id": "D03",
+      "source_json_pointer": "/1/label",
+      "value": "nvfp4-off-compiled-float16"
+    },
+    {
+      "id": "DC045",
+      "source_id": "D03",
+      "source_json_pointer": "/1/canonical/cold_warm_matches",
+      "value": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "DC046",
+      "source_id": "D03",
+      "source_json_pointer": "/1/canonical/warm_warm_matches",
+      "value": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "DC047",
+      "source_id": "D03",
+      "source_json_pointer": "/2/label",
+      "value": "nvfp4-dflash2-compiled-float16"
+    },
+    {
+      "id": "DC048",
+      "source_id": "D03",
+      "source_json_pointer": "/2/canonical/cold_warm_matches",
+      "value": [
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "id": "DC049",
+      "source_id": "D03",
+      "source_json_pointer": "/2/canonical/warm_warm_matches",
+      "value": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": "DC050",
+      "source_id": "D03",
+      "source_json_pointer": "/3/label",
+      "value": "bfloat16-off-eager-float16"
+    },
+    {
+      "id": "DC051",
+      "source_id": "D03",
+      "source_json_pointer": "/3/canonical/cold_warm_matches",
+      "value": [
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "id": "DC052",
+      "source_id": "D03",
+      "source_json_pointer": "/3/canonical/warm_warm_matches",
+      "value": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "DC053",
+      "source_id": "D03",
+      "source_json_pointer": "/4/label",
+      "value": "bfloat16-off-eager-float32"
+    },
+    {
+      "id": "DC054",
+      "source_id": "D03",
+      "source_json_pointer": "/4/canonical/cold_warm_matches",
+      "value": [
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "id": "DC055",
+      "source_id": "D03",
+      "source_json_pointer": "/4/canonical/warm_warm_matches",
+      "value": [
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "id": "DC056",
+      "source_id": "D03",
+      "source_json_pointer": "/5/label",
+      "value": "nvfp4-off-eager-float16"
+    },
+    {
+      "id": "DC057",
+      "source_id": "D03",
+      "source_json_pointer": "/5/canonical/cold_warm_matches",
+      "value": [
+        false,
+        false,
+        true
+      ]
+    },
+    {
+      "id": "DC058",
+      "source_id": "D03",
+      "source_json_pointer": "/5/canonical/warm_warm_matches",
+      "value": [
+        false,
+        false,
+        true
+      ]
+    },
+    {
+      "id": "DC059",
+      "source_id": "D03",
+      "source_json_pointer": "/6/label",
+      "value": "nvfp4-off-eager-float32"
+    },
+    {
+      "id": "DC060",
+      "source_id": "D03",
+      "source_json_pointer": "/6/canonical/cold_warm_matches",
+      "value": [
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "id": "DC061",
+      "source_id": "D03",
+      "source_json_pointer": "/6/canonical/warm_warm_matches",
+      "value": [
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "id": "DC062",
+      "source_id": "D03",
+      "source_json_pointer": "/7/label",
+      "value": "nvfp4-dflash2-eager-float16"
+    },
+    {
+      "id": "DC063",
+      "source_id": "D03",
+      "source_json_pointer": "/7/canonical/cold_warm_matches",
+      "value": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "DC064",
+      "source_id": "D03",
+      "source_json_pointer": "/7/canonical/warm_warm_matches",
+      "value": [
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "id": "DC065",
+      "source_id": "D03",
+      "source_json_pointer": "/8/label",
+      "value": "nvfp4-dflash2-eager-float32"
+    },
+    {
+      "id": "DC066",
+      "source_id": "D03",
+      "source_json_pointer": "/8/canonical/cold_warm_matches",
+      "value": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "DC067",
+      "source_id": "D03",
+      "source_json_pointer": "/8/canonical/warm_warm_matches",
+      "value": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "DC068",
+      "source_id": "D04",
+      "source_json_pointer": "/0/candidate",
+      "value": "FP8"
+    },
+    {
+      "id": "DC069",
+      "source_id": "D04",
+      "source_json_pointer": "/0/reference",
+      "value": "BF16"
+    },
+    {
+      "id": "DC070",
+      "source_id": "D04",
+      "source_json_pointer": "/0/mean_kld",
+      "value": 0.27156896467249036
+    },
+    {
+      "id": "DC071",
+      "source_id": "D04",
+      "source_json_pointer": "/0/top1_agreement",
+      "value": 0.572938689217759
+    },
+    {
+      "id": "DC072",
+      "source_id": "D04",
+      "source_json_pointer": "/0/gate_passed",
+      "value": false
+    },
+    {
+      "id": "DC073",
+      "source_id": "D04",
+      "source_json_pointer": "/1/candidate",
+      "value": "NVFP4"
+    },
+    {
+      "id": "DC074",
+      "source_id": "D04",
+      "source_json_pointer": "/1/reference",
+      "value": "FP8"
+    },
+    {
+      "id": "DC075",
+      "source_id": "D04",
+      "source_json_pointer": "/1/mean_kld",
+      "value": 0.03838047594288134
+    },
+    {
+      "id": "DC076",
+      "source_id": "D04",
+      "source_json_pointer": "/1/top1_agreement",
+      "value": 0.8784355179704016
+    },
+    {
+      "id": "DC077",
+      "source_id": "D04",
+      "source_json_pointer": "/1/gate_passed",
+      "value": true
+    },
+    {
+      "id": "DC078",
+      "source_id": "D04",
+      "source_json_pointer": "/2/candidate",
+      "value": "MTP-prefix"
+    },
+    {
+      "id": "DC079",
+      "source_id": "D04",
+      "source_json_pointer": "/2/reference",
+      "value": "FP8"
+    },
+    {
+      "id": "DC080",
+      "source_id": "D04",
+      "source_json_pointer": "/2/mean_kld",
+      "value": 0.04106491581611443
+    },
+    {
+      "id": "DC081",
+      "source_id": "D04",
+      "source_json_pointer": "/2/top1_agreement",
+      "value": 0.86892177589852
+    },
+    {
+      "id": "DC082",
+      "source_id": "D04",
+      "source_json_pointer": "/2/gate_passed",
+      "value": true
+    },
+    {
+      "id": "DC083",
+      "source_id": "D04",
+      "source_json_pointer": "/3/candidate",
+      "value": "MTP-prefix"
+    },
+    {
+      "id": "DC084",
+      "source_id": "D04",
+      "source_json_pointer": "/3/reference",
+      "value": "NVFP4"
+    },
+    {
+      "id": "DC085",
+      "source_id": "D04",
+      "source_json_pointer": "/3/mean_kld",
+      "value": 0.03987410888540183
+    },
+    {
+      "id": "DC086",
+      "source_id": "D04",
+      "source_json_pointer": "/3/top1_agreement",
+      "value": 0.8763213530655392
+    },
+    {
+      "id": "DC087",
+      "source_id": "D04",
+      "source_json_pointer": "/3/gate_passed",
+      "value": true
+    },
+    {
+      "id": "DC088",
+      "source_id": "D05",
+      "source_json_pointer": "/tests/gsm8k-200-greedy/result/correct",
+      "value": 196
+    },
+    {
+      "id": "DC089",
+      "source_id": "D05",
+      "source_json_pointer": "/tests/gsm8k-200-greedy/result/truncations",
+      "value": 0
+    },
+    {
+      "id": "DC090",
+      "source_id": "D05",
+      "source_json_pointer": "/tests/tg-greedy/result/output_tps",
+      "value": 128.03
+    },
+    {
+      "id": "DC091",
+      "source_id": "D05",
+      "source_json_pointer": "/tests/tg-greedy/result/retained_pass",
+      "value": 2
+    },
+    {
+      "id": "DC092",
+      "source_id": "D05",
+      "source_json_pointer": "/tests/kld-distribution/result/mean_kld",
+      "value": 0.2151688407226269
+    },
+    {
+      "id": "DC093",
+      "source_id": "D05",
+      "source_json_pointer": "/tests/kld-distribution/result/gate_passed",
+      "value": false
+    },
+    {
+      "id": "DC094",
+      "source_id": "D05",
+      "source_json_pointer": "/tests/prefix-cache-32k/result/text_parity",
+      "value": false
+    },
+    {
+      "id": "DC095",
+      "source_id": "D05",
+      "source_json_pointer": "/quality_gates_enforced",
+      "value": false
+    },
+    {
+      "id": "DC096",
+      "source_id": "D05",
+      "source_json_pointer": "/combined_ppl/ppl",
+      "value": 430.95667875077004
+    },
+    {
+      "id": "DC097",
+      "source_id": "D06",
+      "source_json_pointer": "/0/arm",
+      "value": "bfloat16"
+    },
+    {
+      "id": "DC098",
+      "source_id": "D06",
+      "source_json_pointer": "/0/scored",
+      "value": 13
+    },
+    {
+      "id": "DC099",
+      "source_id": "D06",
+      "source_json_pointer": "/0/exact_pass",
+      "value": 8
+    },
+    {
+      "id": "DC100",
+      "source_id": "D06",
+      "source_json_pointer": "/0/truncated",
+      "value": 0
+    },
+    {
+      "id": "DC101",
+      "source_id": "D06",
+      "source_json_pointer": "/1/arm",
+      "value": "fp8"
+    },
+    {
+      "id": "DC102",
+      "source_id": "D06",
+      "source_json_pointer": "/1/scored",
+      "value": 13
+    },
+    {
+      "id": "DC103",
+      "source_id": "D06",
+      "source_json_pointer": "/1/exact_pass",
+      "value": 9
+    },
+    {
+      "id": "DC104",
+      "source_id": "D06",
+      "source_json_pointer": "/1/truncated",
+      "value": 0
+    },
+    {
+      "id": "DC105",
+      "source_id": "D06",
+      "source_json_pointer": "/2/arm",
+      "value": "nvfp4"
+    },
+    {
+      "id": "DC106",
+      "source_id": "D06",
+      "source_json_pointer": "/2/scored",
+      "value": 13
+    },
+    {
+      "id": "DC107",
+      "source_id": "D06",
+      "source_json_pointer": "/2/exact_pass",
+      "value": 8
+    },
+    {
+      "id": "DC108",
+      "source_id": "D06",
+      "source_json_pointer": "/2/truncated",
+      "value": 0
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+name: Repository Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify patch series inventory and PATCHES.md
+        run: |
+          bash patches/apply.sh --list >/dev/null
+          python3 scripts/patches_md.py
+          git diff --exit-code PATCHES.md
+
+      - name: Test patch export round-trip
+        run: bash scripts/test_export_patch.sh
+
+      - name: Validate shell, Python, and JSON syntax
+        run: |
+          bash -n patches/apply.sh patches/check_vllm_series.sh scripts/export-patch.sh scripts/test_export_patch.sh single-user/select_model.sh single-user/start_qwen.sh
+          python3 -m py_compile bench/api_smoke.py bench/harness.py patches/_check_applied.py scripts/patches_md.py
+          python3 -c '
+          import json, pathlib
+          for p in sorted(pathlib.Path(".").rglob("*.json")):
+              if ".git" in p.parts:
+                  continue
+              json.loads(p.read_text())
+          '
+
+      - name: Verify local Markdown links and whitespace
+        run: |
+          git diff --check
+          python3 -c '
+          import pathlib, re, sys
+          root = pathlib.Path(".")
+          broken = []
+          for md in sorted(root.rglob("*.md")):
+              if ".git" in md.parts:
+                  continue
+              text = md.read_text()
+              for m in re.finditer(r"\[([^\]]+)\]\(([^)]+)\)", text):
+                  link = m.group(2)
+                  if link.startswith(("http://", "https://", "mailto:")):
+                      continue
+                  path_part, _, _ = link.partition("#")
+                  target = (md.parent / path_part).resolve() if path_part else md.resolve()
+                  if not target.exists():
+                      broken.append(f"{md} -> {link}")
+          if broken:
+              print("\n".join(broken), file=sys.stderr)
+              sys.exit(1)
+          '

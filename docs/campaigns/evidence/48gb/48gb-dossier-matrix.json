@@ -1,0 +1,407 @@
+{
+  "scope": "Additional native dense and MoE matrix fields for the 48 GB benchmark dossiers.",
+  "source_sha256": "8e42fb263ebbee0d84eb111ccf18d1549913cf5008f6a4dc98d82189b2c7d667",
+  "source_record": "v032-48gb-qwen-20261028.json",
+  "fields": [
+    {
+      "run_key": "qw-w4-df7-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/admitted_context_tokens",
+      "value": 262144
+    },
+    {
+      "run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/admitted_context_tokens",
+      "value": 262144
+    },
+    {
+      "run_key": "qw-n4-df7-extended-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/admitted_context_tokens",
+      "value": 262144
+    },
+    {
+      "run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/admitted_context_tokens",
+      "value": 262144
+    },
+    {
+      "run_key": "qw-w4-df7-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/kv_pool_tokens",
+      "value": 1172863
+    },
+    {
+      "run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/kv_pool_tokens",
+      "value": 440354
+    },
+    {
+      "run_key": "qw-n4-df7-extended-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/kv_pool_tokens",
+      "value": 1030665
+    },
+    {
+      "run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/kv_pool_tokens",
+      "value": 438358
+    },
+    {
+      "run_key": "qw-w4-df7-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/tests/boot/result/model_gib",
+      "value": 13.72
+    },
+    {
+      "run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/tests/boot/result/model_gib",
+      "value": 15.86
+    },
+    {
+      "run_key": "qw-n4-df7-extended-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/boot/result/model_gib",
+      "value": 17.19
+    },
+    {
+      "run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/boot/result/model_gib",
+      "value": 15.86
+    },
+    {
+      "run_key": "qw-w4-df7-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/tests/boot/result/kv_gib",
+      "value": 28.8
+    },
+    {
+      "run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/tests/boot/result/kv_gib",
+      "value": 27.05
+    },
+    {
+      "run_key": "qw-n4-df7-extended-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/boot/result/kv_gib",
+      "value": 25.3
+    },
+    {
+      "run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/boot/result/kv_gib",
+      "value": 27.05
+    },
+    {
+      "run_key": "qw-w4-df7-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/tests/gsm8k-200-greedy/result/correct",
+      "value": 192
+    },
+    {
+      "run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/tests/gsm8k-200-greedy/result/correct",
+      "value": 194
+    },
+    {
+      "run_key": "qw-n4-df7-extended-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/gsm8k-200-greedy/result/correct",
+      "value": 192
+    },
+    {
+      "run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/gsm8k-200-greedy/result/correct",
+      "value": 192
+    },
+    {
+      "run_key": "qw-w4-df7-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/tests/gsm8k-200-greedy/result/truncations",
+      "value": 6
+    },
+    {
+      "run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/tests/gsm8k-200-greedy/result/truncations",
+      "value": 4
+    },
+    {
+      "run_key": "qw-n4-df7-extended-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/gsm8k-200-greedy/result/truncations",
+      "value": 6
+    },
+    {
+      "run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/gsm8k-200-greedy/result/truncations",
+      "value": 5
+    },
+    {
+      "run_key": "qw-w4-df7-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/combined_ppl/ppl",
+      "value": 6.993107322373697
+    },
+    {
+      "run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/combined_ppl/ppl",
+      "value": 7.115166568908381
+    },
+    {
+      "run_key": "qw-n4-df7-extended-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/combined_ppl/ppl",
+      "value": 7.1071186010548955
+    },
+    {
+      "run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/combined_ppl/ppl",
+      "value": 7.105894481137705
+    },
+    {
+      "run_key": "qw-w4-df7-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/tests/kld-distribution/result/mean_kld",
+      "value": 0.0030665583690269176
+    },
+    {
+      "run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/tests/kld-distribution/result/mean_kld",
+      "value": 0.0
+    },
+    {
+      "run_key": "qw-n4-df7-extended-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/kld-distribution/result/mean_kld",
+      "value": 0.044216757907691945
+    },
+    {
+      "run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/kld-distribution/result/mean_kld",
+      "value": 0.026553895168100073
+    },
+    {
+      "run_key": "qw-w4-df7-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/tests/kld-distribution/result/top1_agreement",
+      "value": 0.9809725158562368
+    },
+    {
+      "run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/tests/kld-distribution/result/top1_agreement",
+      "value": 1.0
+    },
+    {
+      "run_key": "qw-n4-df7-extended-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/kld-distribution/result/top1_agreement",
+      "value": 0.8678646934460887
+    },
+    {
+      "run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/kld-distribution/result/top1_agreement",
+      "value": 0.9175475687103594
+    },
+    {
+      "run_key": "qw-w4-df7-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/tests/tg-greedy/result/output_tps",
+      "value": 192.58
+    },
+    {
+      "run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/tests/tg-greedy/result/output_tps",
+      "value": 65.77
+    },
+    {
+      "run_key": "qw-n4-df7-extended-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/tg-greedy/result/output_tps",
+      "value": 186.61
+    },
+    {
+      "run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/tg-greedy/result/output_tps",
+      "value": 66.63
+    },
+    {
+      "run_key": "qw-w4-df7-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/tests/tg-greedy/result/decode_tps",
+      "value": 197.62845849802372
+    },
+    {
+      "run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/tests/tg-greedy/result/decode_tps",
+      "value": 65.91957811470007
+    },
+    {
+      "run_key": "qw-n4-df7-extended-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/tg-greedy/result/decode_tps",
+      "value": 191.57088122605364
+    },
+    {
+      "run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/tg-greedy/result/decode_tps",
+      "value": 66.8002672010688
+    },
+    {
+      "run_key": "qw-w4-df7-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/tests/tg-instruct/result/output_tps",
+      "value": 153.48
+    },
+    {
+      "run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/tests/tg-instruct/result/output_tps",
+      "value": 65.01
+    },
+    {
+      "run_key": "qw-n4-df7-extended-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/tg-instruct/result/output_tps",
+      "value": 154.99
+    },
+    {
+      "run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/tg-instruct/result/output_tps",
+      "value": 65.83
+    },
+    {
+      "run_key": "qw-w4-df7-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/tests/tg-instruct/result/decode_tps",
+      "value": 157.2327044025157
+    },
+    {
+      "run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/tests/tg-instruct/result/decode_tps",
+      "value": 65.14657980456026
+    },
+    {
+      "run_key": "qw-n4-df7-extended-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/tg-instruct/result/decode_tps",
+      "value": 156.4945226917058
+    },
+    {
+      "run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/tg-instruct/result/decode_tps",
+      "value": 66.006600660066
+    },
+    {
+      "run_key": "qw-w4-df7-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/tests/pp-1024/result/cold_tps",
+      "value": 3464.9
+    },
+    {
+      "run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/tests/pp-1024/result/cold_tps",
+      "value": 11797.9
+    },
+    {
+      "run_key": "qw-n4-df7-extended-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/pp-1024/result/cold_tps",
+      "value": 11102.8
+    },
+    {
+      "run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/pp-1024/result/cold_tps",
+      "value": 9843.5
+    },
+    {
+      "run_key": "qw-w4-df7-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/verified_occupied_context_tokens",
+      "value": 130605
+    },
+    {
+      "run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/verified_occupied_context_tokens",
+      "value": 130623
+    },
+    {
+      "run_key": "qw-n4-df7-extended-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/verified_occupied_context_tokens",
+      "value": 260804
+    },
+    {
+      "run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/verified_occupied_context_tokens",
+      "value": 130603
+    },
+    {
+      "run_key": "qwen-moe-nvfp4-fast-vision-extended-20261029/MTP3-prefix-vision-extended-fp8ref",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/admitted_context_tokens",
+      "value": 262144
+    },
+    {
+      "run_key": "qwen-moe-nvfp4-fast-vision-extended-20261029/MTP3-prefix-vision-extended-fp8ref",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/kv_pool_tokens",
+      "value": 3045863
+    },
+    {
+      "run_key": "qwen-moe-nvfp4-fast-vision-extended-20261029/MTP3-prefix-vision-extended-fp8ref",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/boot/result/model_gib",
+      "value": 22.05
+    },
+    {
+      "run_key": "qwen-moe-nvfp4-fast-vision-extended-20261029/MTP3-prefix-vision-extended-fp8ref",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/boot/result/kv_gib",
+      "value": 20.16
+    },
+    {
+      "run_key": "qwen-moe-nvfp4-fast-vision-extended-20261029/MTP3-prefix-vision-extended-fp8ref",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/combined_ppl/ppl",
+      "value": 7.55848310034097
+    },
+    {
+      "run_key": "qwen-moe-nvfp4-fast-vision-extended-20261029/MTP3-prefix-vision-extended-fp8ref",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/tg-instruct/result/output_tps",
+      "value": 313.92
+    },
+    {
+      "run_key": "qwen-moe-nvfp4-fast-vision-extended-20261029/MTP3-prefix-vision-extended-fp8ref",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/tg-greedy/result/decode_tps",
+      "value": 342.4657534246575
+    },
+    {
+      "run_key": "qwen-moe-nvfp4-fast-vision-extended-20261029/MTP3-prefix-vision-extended-fp8ref",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/tg-instruct/result/decode_tps",
+      "value": 319.4888178913738
+    }
+  ],
+  "additional_source": {
+    "record": "v032-48gb-moe-20261029/run-results.json",
+    "sha256": "fbe9bf4e6a67c045ea94576ffe07c5d6bd96038117e4df675ee2d969a45934a2"
+  },
+  "readme_summary_fields": [
+    {
+      "source_record": "v032-48gb-moe-20261029/run-results.json",
+      "source_sha256": "fbe9bf4e6a67c045ea94576ffe07c5d6bd96038117e4df675ee2d969a45934a2",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/pp-1024/result/cold_tps",
+      "value": 22438.6
+    },
+    {
+      "source_record": "v032-48gb-moe-20261029/run-results.json",
+      "source_sha256": "fbe9bf4e6a67c045ea94576ffe07c5d6bd96038117e4df675ee2d969a45934a2",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/pp-1024/result/trials/0/cached_tokens",
+      "value": 0
+    },
+    {
+      "source_record": "v032-48gb-gemma-20261028/fp8-native-mtp3-prefix-vision/fp8/result.json",
+      "source_sha256": "cfb9db1085f071fdba6b2bb64d35acfb29081cc03bf2d32826d92b41e47c097d",
+      "source_json_pointer": "/tests/pp-1024/result/cold_tps",
+      "value": 8908.1
+    },
+    {
+      "source_record": "v032-48gb-gemma-20261028/fp8-native-mtp3-prefix-vision/fp8/result.json",
+      "source_sha256": "cfb9db1085f071fdba6b2bb64d35acfb29081cc03bf2d32826d92b41e47c097d",
+      "source_json_pointer": "/tests/pp-1024/result/trials/0/cached_tokens",
+      "value": 0
+    },
+    {
+      "source_record": "v032-48gb-gemma-20261028/fp8-native-mtp3-prefix-vision/fp8/result.json",
+      "source_sha256": "cfb9db1085f071fdba6b2bb64d35acfb29081cc03bf2d32826d92b41e47c097d",
+      "source_json_pointer": "/tests/deep-ctx-261120/result/prompt_tokens",
+      "value": 260618
+    },
+    {
+      "source_record": "v032-48gb-gemma-20261028/fp8-native-mtp3-prefix-vision/fp8/result.json",
+      "source_sha256": "cfb9db1085f071fdba6b2bb64d35acfb29081cc03bf2d32826d92b41e47c097d",
+      "source_json_pointer": "/tests/deep-ctx-261120/result/completion_tokens",
+      "value": 128
+    },
+    {
+      "source_record": "v032-48gb-gemma-20261028/fp8-native-mtp3-prefix-vision/fp8/result.json",
+      "source_sha256": "cfb9db1085f071fdba6b2bb64d35acfb29081cc03bf2d32826d92b41e47c097d",
+      "source_json_pointer": "/tests/deep-ctx-261120/result/final_context_tokens",
+      "value": 260746
+    },
+    {
+      "source_record": "v032-48gb-gemma-20261028/fp8-native-mtp3-prefix-vision/fp8/result.json",
+      "source_sha256": "cfb9db1085f071fdba6b2bb64d35acfb29081cc03bf2d32826d92b41e47c097d",
+      "source_json_pointer": "/tests/deep-ctx-261120/result/cached_tokens",
+      "value": 480
+    },
+    {
+      "source_record": "v032-48gb-gemma-20261028/fp8-native-mtp3-prefix-vision/fp8/result.json",
+      "source_sha256": "cfb9db1085f071fdba6b2bb64d35acfb29081cc03bf2d32826d92b41e47c097d",
+      "source_json_pointer": "/tests/deep-ctx-261120/result/missing",
+      "value": []
+    }
+  ]
+}

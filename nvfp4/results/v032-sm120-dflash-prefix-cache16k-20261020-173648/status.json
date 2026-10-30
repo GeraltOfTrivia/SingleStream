@@ -1,0 +1,13 @@
+{
+  "stage": "Prefix Caching",
+  "state": "COMPLETE",
+  "arms": [
+    "nvfp4"
+  ],
+  "run_started_at": 1792507013.2767558,
+  "updated_at": 1792507143.3843436,
+  "arm_index": 1,
+  "arm_count": 1,
+  "test": null,
+  "completed_arms": 1
+}

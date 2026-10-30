@@ -1,0 +1,723 @@
+{
+  "schema_version": 1,
+  "scope": "Selected scalar evidence for the 48 GB benchmark dossiers.",
+  "provenance": {
+    "source_branch": "v032-48gb",
+    "source_commit": "b856ee30c30f2afe152766a9c8cae66f0f3d4eef"
+  },
+  "limitations": [
+    "This extract supports record consistency, not independent reproduction.",
+    "Private source hashes identify originals but do not permit independent checking without those originals.",
+    "Six dense native runs were checked against a consolidated archive; historical referenced result files were absent.",
+    "Qualified, filtered, smoke, failed-repeat and diagnostic records must not be merged into an uninterrupted passing run.",
+    "The configuration draft_tokens field is not applicable when spec is off."
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "record_name": "result.json",
+      "sha256": "f89146c142d7572f0b28e541c9705d11c94ae98c838c530551d6ad8c624e724b",
+      "availability": "Private source; not included in this export"
+    },
+    {
+      "id": "S02",
+      "record_name": "result.json",
+      "sha256": "263726ce87e7b7a5c9a3a8dc304825370b2819568e50c06444bde7824d2b0cae",
+      "availability": "Private source; not included in this export"
+    },
+    {
+      "id": "S03",
+      "record_name": "result.json",
+      "sha256": "caa150632e839148aafe09ebd2d766f789c9793a618087fc5e80efa65f512b89",
+      "availability": "Private source; not included in this export"
+    },
+    {
+      "id": "S04",
+      "record_name": "run-results.json",
+      "sha256": "fbe9bf4e6a67c045ea94576ffe07c5d6bd96038117e4df675ee2d969a45934a2",
+      "availability": "Private source; not included in this export"
+    },
+    {
+      "id": "S05",
+      "record_name": "v032-48gb-qwen-20261028.json",
+      "sha256": "8e42fb263ebbee0d84eb111ccf18d1549913cf5008f6a4dc98d82189b2c7d667",
+      "availability": "Private source; not included in this export"
+    },
+    {
+      "id": "S06",
+      "record_name": "deep-stream.json",
+      "sha256": "6b3e17ffecb33f049eb69f470beb3ed1c7f989742b99649cb219d8f5fc2c6b0c",
+      "availability": "Private source; not included in this export"
+    },
+    {
+      "id": "S07",
+      "record_name": "result.json",
+      "sha256": "9ca392cb882fa00a453ea68810c4ac91a30abc188b73da9d86095dcbf617c854",
+      "availability": "Private source; not included in this export"
+    },
+    {
+      "id": "S08",
+      "record_name": "deep-stream.json",
+      "sha256": "f8db0425db9848dcb71c97af11989be3a9a8240a05a6ae0a0feb255c265970da",
+      "availability": "Private source; not included in this export"
+    },
+    {
+      "id": "S09",
+      "record_name": "result.json",
+      "sha256": "079239066fbca0bcff333c96318587e9abd9f323aa6f21a9f88549cfb2761b27",
+      "availability": "Private source; not included in this export"
+    },
+    {
+      "id": "S10",
+      "record_name": "result.json",
+      "sha256": "12b1ed158b0a5fd2d68a79c264976c9630aaa691844c91abfdaaf14093073fbb",
+      "availability": "Private source; not included in this export"
+    }
+  ],
+  "configurations": [
+    {
+      "id": "Q01",
+      "source_id": "S05",
+      "source_run_key": "qw-w4-df7-qualification-20261028-01",
+      "configuration": {
+        "arm": "nvfp4",
+        "backend": "FLASHINFER",
+        "spec": "dflash2",
+        "draft_tokens": 7,
+        "prefix_cache": false,
+        "gpu_util": "0.93",
+        "prefill_budget": 2048,
+        "max_seqs": 1,
+        "host_limit_bytes": 48000000000,
+        "compiler_concurrency": 4,
+        "stack": "vLLM 0.32.0 / FlashInfer 0.7.0.post1",
+        "tier": "qualification"
+      }
+    },
+    {
+      "id": "Q02",
+      "source_id": "S05",
+      "source_run_key": "qw-n4-bf16-off-qualification-20261028-01",
+      "configuration": {
+        "arm": "bfloat16",
+        "backend": "FLASHINFER",
+        "spec": "off",
+        "draft_tokens": 3,
+        "prefix_cache": false,
+        "gpu_util": "0.93",
+        "prefill_budget": 2048,
+        "max_seqs": 1,
+        "host_limit_bytes": 48000000000,
+        "compiler_concurrency": 4,
+        "stack": "vLLM 0.32.0 / FlashInfer 0.7.0.post1",
+        "tier": "qualification"
+      }
+    },
+    {
+      "id": "Q03",
+      "source_id": "S05",
+      "source_run_key": "qw-n4-df7-extended-20261028-01",
+      "configuration": {
+        "arm": "nvfp4",
+        "backend": "FLASHINFER",
+        "spec": "dflash2",
+        "draft_tokens": 7,
+        "prefix_cache": false,
+        "gpu_util": "0.93",
+        "prefill_budget": 2048,
+        "max_seqs": 1,
+        "host_limit_bytes": 48000000000,
+        "compiler_concurrency": 4,
+        "stack": "vLLM 0.32.0 / FlashInfer 0.7.0.post1",
+        "tier": "extended"
+      }
+    },
+    {
+      "id": "Q04",
+      "source_id": "S05",
+      "source_run_key": "qw-n4-bf16-off-prefix-qualification-20261028-01",
+      "configuration": {
+        "arm": "bfloat16",
+        "backend": "FLASHINFER",
+        "spec": "off",
+        "draft_tokens": 4,
+        "prefix_cache": true,
+        "gpu_util": "0.93",
+        "prefill_budget": 2048,
+        "max_seqs": 1,
+        "host_limit_bytes": 48000000000,
+        "compiler_concurrency": 4,
+        "stack": "vLLM 0.32.0 / FlashInfer 0.7.0.post1",
+        "tier": "qualification"
+      }
+    },
+    {
+      "id": "F01",
+      "source_id": "S05",
+      "source_run_key": "qw-w4-df7-prefix-qualification-20261028-01",
+      "configuration": {
+        "arm": "nvfp4",
+        "backend": "FLASHINFER",
+        "spec": "dflash2",
+        "draft_tokens": 7,
+        "prefix_cache": true,
+        "gpu_util": "0.93",
+        "prefill_budget": 2048,
+        "max_seqs": 1,
+        "host_limit_bytes": 48000000000,
+        "compiler_concurrency": 4,
+        "stack": "vLLM 0.32.0 / FlashInfer 0.7.0.post1",
+        "tier": "qualification"
+      }
+    },
+    {
+      "id": "F02",
+      "source_id": "S05",
+      "source_run_key": "qw-n4-df7-prefix-extended-20261028-01",
+      "configuration": {
+        "arm": "nvfp4",
+        "backend": "FLASHINFER",
+        "spec": "dflash2",
+        "draft_tokens": 7,
+        "prefix_cache": true,
+        "gpu_util": "0.93",
+        "prefill_budget": 2048,
+        "max_seqs": 1,
+        "host_limit_bytes": 48000000000,
+        "compiler_concurrency": 4,
+        "stack": "vLLM 0.32.0 / FlashInfer 0.7.0.post1",
+        "tier": "extended"
+      }
+    },
+    {
+      "id": "M01",
+      "source_id": "S04",
+      "source_run_key": "qwen-moe-nvfp4-fast-vision-extended-20261029/MTP3-prefix-vision-extended-fp8ref",
+      "configuration": {
+        "arm": "nvfp4",
+        "backend": "FLASHINFER",
+        "spec": "mtp",
+        "draft_tokens": 3,
+        "prefix_cache": true,
+        "gpu_util": "0.92",
+        "prefill_budget": 2048,
+        "max_seqs": 1,
+        "host_limit_bytes": 154618822656,
+        "compiler_concurrency": 16,
+        "stack": "vLLM 0.32.0 / FlashInfer 0.7.0.post1",
+        "tier": "extended",
+        "vision_enabled": true,
+        "vision_encoder_device": "cuda",
+        "vision_cpu_offload": false,
+        "qualification_gsm_threshold": 180,
+        "gsm_max_tokens": 768
+      }
+    }
+  ],
+  "claims": [
+    {
+      "id": "C001",
+      "description": "Q01 GSM",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/tests/gsm8k-200-greedy/result/correct",
+      "value": 192
+    },
+    {
+      "id": "C002",
+      "description": "Q01 greedy output tok/s",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/tests/tg-greedy/result/output_tps",
+      "value": 192.58
+    },
+    {
+      "id": "C003",
+      "description": "Q01 retained greedy pass",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/tests/tg-greedy/result/retained_pass",
+      "value": 2
+    },
+    {
+      "id": "C004",
+      "description": "Q01 retained pass matches output",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-w4-df7-qualification-20261028-01/tests/tg-greedy/result/planned_passes/1/output_tps",
+      "value": 192.58
+    },
+    {
+      "id": "C005",
+      "description": "Q02 GSM",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/tests/gsm8k-200-greedy/result/correct",
+      "value": 194
+    },
+    {
+      "id": "C006",
+      "description": "Q02 greedy output tok/s",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/tests/tg-greedy/result/output_tps",
+      "value": 65.77
+    },
+    {
+      "id": "C007",
+      "description": "Q02 retained greedy pass",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/tests/tg-greedy/result/retained_pass",
+      "value": 2
+    },
+    {
+      "id": "C008",
+      "description": "Q02 retained pass matches output",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-qualification-20261028-01/tests/tg-greedy/result/planned_passes/1/output_tps",
+      "value": 65.77
+    },
+    {
+      "id": "C009",
+      "description": "Q03 GSM",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/gsm8k-200-greedy/result/correct",
+      "value": 192
+    },
+    {
+      "id": "C010",
+      "description": "Q03 greedy output tok/s",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/tg-greedy/result/output_tps",
+      "value": 186.61
+    },
+    {
+      "id": "C011",
+      "description": "Q03 retained greedy pass",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/tg-greedy/result/retained_pass",
+      "value": 2
+    },
+    {
+      "id": "C012",
+      "description": "Q03 retained pass matches output",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/tg-greedy/result/planned_passes/1/output_tps",
+      "value": 186.61
+    },
+    {
+      "id": "C013",
+      "description": "Q04 GSM",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/gsm8k-200-greedy/result/correct",
+      "value": 192
+    },
+    {
+      "id": "C014",
+      "description": "Q04 greedy output tok/s",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/tg-greedy/result/output_tps",
+      "value": 66.63
+    },
+    {
+      "id": "C015",
+      "description": "Q04 retained greedy pass",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/tg-greedy/result/retained_pass",
+      "value": 2
+    },
+    {
+      "id": "C016",
+      "description": "Q04 retained pass matches output",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/tg-greedy/result/planned_passes/1/output_tps",
+      "value": 66.63
+    },
+    {
+      "id": "C017",
+      "description": "Q04 prefix parity",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-bf16-off-prefix-qualification-20261028-01/tests/prefix-cache-32k/result/text_parity",
+      "value": true
+    },
+    {
+      "id": "C018",
+      "description": "F01 GSM",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-w4-df7-prefix-qualification-20261028-01/tests/gsm8k-200-greedy/result/correct",
+      "value": 192
+    },
+    {
+      "id": "C019",
+      "description": "F01 greedy output tok/s",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-w4-df7-prefix-qualification-20261028-01/tests/tg-greedy/result/output_tps",
+      "value": 182.48
+    },
+    {
+      "id": "C020",
+      "description": "F01 retained greedy pass",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-w4-df7-prefix-qualification-20261028-01/tests/tg-greedy/result/retained_pass",
+      "value": 2
+    },
+    {
+      "id": "C021",
+      "description": "F01 retained pass matches output",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-w4-df7-prefix-qualification-20261028-01/tests/tg-greedy/result/planned_passes/1/output_tps",
+      "value": 182.48
+    },
+    {
+      "id": "C022",
+      "description": "F01 prefix parity",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-w4-df7-prefix-qualification-20261028-01/tests/prefix-cache-32k/result/text_parity",
+      "value": false
+    },
+    {
+      "id": "C023",
+      "description": "F02 GSM",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-df7-prefix-extended-20261028-01/tests/gsm8k-200-greedy/result/correct",
+      "value": 192
+    },
+    {
+      "id": "C024",
+      "description": "F02 greedy output tok/s",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-df7-prefix-extended-20261028-01/tests/tg-greedy/result/output_tps",
+      "value": 173.65
+    },
+    {
+      "id": "C025",
+      "description": "F02 retained greedy pass",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-df7-prefix-extended-20261028-01/tests/tg-greedy/result/retained_pass",
+      "value": 2
+    },
+    {
+      "id": "C026",
+      "description": "F02 retained pass matches output",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-df7-prefix-extended-20261028-01/tests/tg-greedy/result/planned_passes/1/output_tps",
+      "value": 173.65
+    },
+    {
+      "id": "C027",
+      "description": "F02 prefix parity",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-df7-prefix-extended-20261028-01/tests/prefix-cache-32k/result/text_parity",
+      "value": false
+    },
+    {
+      "id": "C028",
+      "description": "Y01 prompt_tokens",
+      "source_id": "S09",
+      "source_json_pointer": "/tests/deep-ctx-523264/result/prompt_tokens",
+      "value": 522762
+    },
+    {
+      "id": "C029",
+      "description": "Y01 completion_tokens",
+      "source_id": "S09",
+      "source_json_pointer": "/tests/deep-ctx-523264/result/completion_tokens",
+      "value": 147
+    },
+    {
+      "id": "C030",
+      "description": "Y01 cached_tokens",
+      "source_id": "S09",
+      "source_json_pointer": "/tests/deep-ctx-523264/result/cached_tokens",
+      "value": 0
+    },
+    {
+      "id": "C031",
+      "description": "Y01 missing",
+      "source_id": "S09",
+      "source_json_pointer": "/tests/deep-ctx-523264/result/missing",
+      "value": []
+    },
+    {
+      "id": "C032",
+      "description": "Y02 prompt_tokens",
+      "source_id": "S07",
+      "source_json_pointer": "/tests/deep-ctx-1047552/result/prompt_tokens",
+      "value": 1047050
+    },
+    {
+      "id": "C033",
+      "description": "Y02 completion_tokens",
+      "source_id": "S07",
+      "source_json_pointer": "/tests/deep-ctx-1047552/result/completion_tokens",
+      "value": 182
+    },
+    {
+      "id": "C034",
+      "description": "Y02 cached_tokens",
+      "source_id": "S07",
+      "source_json_pointer": "/tests/deep-ctx-1047552/result/cached_tokens",
+      "value": 0
+    },
+    {
+      "id": "C035",
+      "description": "Y02 missing",
+      "source_id": "S07",
+      "source_json_pointer": "/tests/deep-ctx-1047552/result/missing",
+      "value": []
+    },
+    {
+      "id": "C036",
+      "description": "Y03 GSM",
+      "source_id": "S10",
+      "source_json_pointer": "/tests/gsm8k-200-greedy/result/correct",
+      "value": 190
+    },
+    {
+      "id": "C037",
+      "description": "Y03 greedy output tok/s",
+      "source_id": "S10",
+      "source_json_pointer": "/tests/tg-greedy/result/output_tps",
+      "value": 176.75
+    },
+    {
+      "id": "C038",
+      "description": "Y03 retained greedy pass",
+      "source_id": "S10",
+      "source_json_pointer": "/tests/tg-greedy/result/retained_pass",
+      "value": 2
+    },
+    {
+      "id": "C039",
+      "description": "Y03 retained pass matches output",
+      "source_id": "S10",
+      "source_json_pointer": "/tests/tg-greedy/result/planned_passes/1/output_tps",
+      "value": 176.75
+    },
+    {
+      "id": "C040",
+      "description": "Y03 prefix parity",
+      "source_id": "S10",
+      "source_json_pointer": "/tests/prefix-cache-32k/result/text_parity",
+      "value": false
+    },
+    {
+      "id": "C041",
+      "description": "MoE NVFP4-Fast native GSM",
+      "source_id": "S04",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/gsm8k-200-greedy/result/correct",
+      "value": 192
+    },
+    {
+      "id": "C042",
+      "description": "MoE NVFP4-Fast native greedy output tok/s",
+      "source_id": "S04",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/tg-greedy/result/output_tps",
+      "value": 336.49
+    },
+    {
+      "id": "C043",
+      "description": "MoE NVFP4-Fast native retained greedy pass",
+      "source_id": "S04",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/tg-greedy/result/retained_pass",
+      "value": 2
+    },
+    {
+      "id": "C044",
+      "description": "MoE NVFP4-Fast native retained pass matches output",
+      "source_id": "S04",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/tg-greedy/result/planned_passes/1/output_tps",
+      "value": 336.49
+    },
+    {
+      "id": "C045",
+      "description": "MoE NVFP4-Fast native prefix parity",
+      "source_id": "S04",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/prefix-cache-32k/result/text_parity",
+      "value": false
+    },
+    {
+      "id": "C046",
+      "description": "MoE near-max prompt_tokens",
+      "source_id": "S04",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/deep-ctx-261120/result/prompt_tokens",
+      "value": 260616
+    },
+    {
+      "id": "C047",
+      "description": "MoE near-max completion_tokens",
+      "source_id": "S04",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/deep-ctx-261120/result/completion_tokens",
+      "value": 173
+    },
+    {
+      "id": "C048",
+      "description": "MoE near-max cached_tokens",
+      "source_id": "S04",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/deep-ctx-261120/result/cached_tokens",
+      "value": 10000
+    },
+    {
+      "id": "C049",
+      "description": "MoE near-max elapsed_s",
+      "source_id": "S04",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/deep-ctx-261120/result/elapsed_s",
+      "value": 80.52
+    },
+    {
+      "id": "C050",
+      "description": "MoE near-max missing",
+      "source_id": "S04",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/deep-ctx-261120/result/missing",
+      "value": []
+    },
+    {
+      "id": "C051",
+      "description": "FP8 comparator KL",
+      "source_id": "S04",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/kld-distribution/result/vs_kv_reference/mean_kld",
+      "value": 0.04074328337936477
+    },
+    {
+      "id": "C052",
+      "description": "target-only NVFP4 KL",
+      "source_id": "S04",
+      "source_json_pointer": "/qwen-moe-nvfp4-fast-vision-extended-20261029~1MTP3-prefix-vision-extended-fp8ref/tests/kld-distribution/result/vs_nvfp4_target_only/mean_kld",
+      "value": 0.037881829581491444
+    },
+    {
+      "id": "C053",
+      "description": "checkpoint gittensor GSM",
+      "source_id": "S01",
+      "source_json_pointer": "/arms/nvfp4/tests/gsm8k-200-greedy/result/correct",
+      "value": 193
+    },
+    {
+      "id": "C054",
+      "description": "checkpoint gittensor greedy output tok/s",
+      "source_id": "S01",
+      "source_json_pointer": "/arms/nvfp4/tests/tg-greedy/result/output_tps",
+      "value": 184.69
+    },
+    {
+      "id": "C055",
+      "description": "checkpoint gittensor retained greedy pass",
+      "source_id": "S01",
+      "source_json_pointer": "/arms/nvfp4/tests/tg-greedy/result/retained_pass",
+      "value": 2
+    },
+    {
+      "id": "C056",
+      "description": "checkpoint gittensor retained pass matches output",
+      "source_id": "S01",
+      "source_json_pointer": "/arms/nvfp4/tests/tg-greedy/result/planned_passes/1/output_tps",
+      "value": 184.69
+    },
+    {
+      "id": "C057",
+      "description": "checkpoint quasar failed GSM score in error",
+      "source_id": "S03",
+      "source_json_pointer": "/arms/nvfp4/tests/gsm8k-200-greedy/error",
+      "value": "GSM8K gate failed: 188/200 < required threshold 190"
+    },
+    {
+      "id": "C058",
+      "description": "checkpoint quasar greedy output tok/s",
+      "source_id": "S03",
+      "source_json_pointer": "/arms/nvfp4/tests/tg-greedy/result/output_tps",
+      "value": 156.15
+    },
+    {
+      "id": "C059",
+      "description": "checkpoint quasar retained greedy pass",
+      "source_id": "S03",
+      "source_json_pointer": "/arms/nvfp4/tests/tg-greedy/result/retained_pass",
+      "value": 2
+    },
+    {
+      "id": "C060",
+      "description": "checkpoint quasar retained pass matches output",
+      "source_id": "S03",
+      "source_json_pointer": "/arms/nvfp4/tests/tg-greedy/result/planned_passes/1/output_tps",
+      "value": 156.15
+    },
+    {
+      "id": "C061",
+      "description": "checkpoint kelnei GSM",
+      "source_id": "S02",
+      "source_json_pointer": "/arms/nvfp4/tests/gsm8k-200-greedy/result/correct",
+      "value": 191
+    },
+    {
+      "id": "C062",
+      "description": "checkpoint kelnei greedy output tok/s",
+      "source_id": "S02",
+      "source_json_pointer": "/arms/nvfp4/tests/tg-greedy/result/output_tps",
+      "value": 139.32
+    },
+    {
+      "id": "C063",
+      "description": "checkpoint kelnei retained greedy pass",
+      "source_id": "S02",
+      "source_json_pointer": "/arms/nvfp4/tests/tg-greedy/result/retained_pass",
+      "value": 2
+    },
+    {
+      "id": "C064",
+      "description": "checkpoint kelnei retained pass matches output",
+      "source_id": "S02",
+      "source_json_pointer": "/arms/nvfp4/tests/tg-greedy/result/planned_passes/1/output_tps",
+      "value": 139.32
+    },
+    {
+      "id": "C065",
+      "description": "524288 streamed cold TTFT seconds",
+      "source_id": "S08",
+      "source_json_pointer": "/cold_ttft_seconds",
+      "value": 648.9345168020009
+    },
+    {
+      "id": "C066",
+      "description": "1048576 streamed cold TTFT seconds",
+      "source_id": "S06",
+      "source_json_pointer": "/cold_ttft_seconds",
+      "value": 2515.289057689006
+    },
+    {
+      "id": "C067",
+      "description": "Manuscript context/timing: prompt_tokens",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/deep-ctx-261120/result/prompt_tokens",
+      "value": 260616
+    },
+    {
+      "id": "C068",
+      "description": "Manuscript context/timing: completion_tokens",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/deep-ctx-261120/result/completion_tokens",
+      "value": 188
+    },
+    {
+      "id": "C069",
+      "description": "Manuscript context/timing: final_context_tokens",
+      "source_id": "S05",
+      "source_json_pointer": "/runs/qw-n4-df7-extended-20261028-01/tests/deep-ctx-261120/result/final_context_tokens",
+      "value": 260804
+    },
+    {
+      "id": "C070",
+      "description": "Manuscript context/timing: final_context_tokens",
+      "source_id": "S09",
+      "source_json_pointer": "/tests/deep-ctx-523264/result/final_context_tokens",
+      "value": 522909
+    },
+    {
+      "id": "C071",
+      "description": "Manuscript context/timing: final_context_tokens",
+      "source_id": "S07",
+      "source_json_pointer": "/tests/deep-ctx-1047552/result/final_context_tokens",
+      "value": 1047232
+    },
+    {
+      "id": "C072",
+      "description": "Manuscript context/timing: elapsed_s",
+      "source_id": "S07",
+      "source_json_pointer": "/tests/deep-ctx-1047552/result/elapsed_s",
+      "value": 2517.08
+    }
+  ]
+}

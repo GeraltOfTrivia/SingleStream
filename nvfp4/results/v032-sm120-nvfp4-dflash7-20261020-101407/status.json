@@ -1,0 +1,21 @@
+{
+  "stage": 1,
+  "state": "COMPLETE",
+  "arms": [
+    "auto",
+    "fp8",
+    "nvfp4"
+  ],
+  "run_started_at": 1792480453.1152077,
+  "updated_at": 1792484974.9969752,
+  "arm_index": 3,
+  "arm_count": 3,
+  "test": null,
+  "completed_samples": 26,
+  "total_samples": 26,
+  "correct_answers": 190,
+  "truncated_answers": 7,
+  "planned_pass": 2,
+  "total_passes": 2,
+  "completed_arms": 3
+}

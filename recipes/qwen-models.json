@@ -1,0 +1,24 @@
+{
+  "models": {
+    "w4-fast": {
+      "name": "W4A16 AutoRound fast (prepared)",
+      "directory": "Qwen3.8-27B-W4A16-AutoRound-fast",
+      "repo": "dbirks/Qwen3.8-27B-W4A16-AutoRound",
+      "revision": "1f05c441c4e64ae0549de44fa9ea5a6d43610314",
+      "overlay_repo": "syvai/qwen3.8-27b-3090-fast-variant",
+      "overlay_revision": "124c14e7e8c7d2f5402933b9af368e772a9fcf0c"
+    },
+    "gittensor": {
+      "name": "Gittensor pre-final NVFP4",
+      "directory": "Qwen3.8-27B-NVFP4-RTX5090-pre-final",
+      "repo": "gittensor-model-hub/Qwen3.8-27B-NVFP4-RTX5090",
+      "revision": "35fd99fb8434ef70ee61372df3face5174bed2c8"
+    }
+  },
+  "external_drafter": {
+    "name": "Publisher NVFP4 DFlash2",
+    "directory": "Qwen3.8-27B-DFlash2-NVFP4-YourHighnessLA",
+    "repo": "YourHighnessLA/Qwen3.8-27B-DFlash2-NVFP4",
+    "revision": "a9334054bb4d2195ea75b812944037bc21b1269b"
+  }
+}

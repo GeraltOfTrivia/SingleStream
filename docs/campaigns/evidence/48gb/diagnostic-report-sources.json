@@ -1,0 +1,27 @@
+[
+  {
+    "record": "vllm-0.32-48gb-moe-results.md",
+    "sha256": "acd8594c2642179b5ac552693cd446331e3c3384c6a7aac6578077d16548af77",
+    "availability": "Private source report; not included"
+  },
+  {
+    "record": "vllm-0.32-48gb-master-table.md",
+    "sha256": "5bf5167c2d71380ed0e27dbe9fbb63680f1b6b8cbec8b5dd036d9abd792091da",
+    "availability": "Private source report; not included"
+  },
+  {
+    "record": "data/v032-48gb-gemma-20261028/fp8-native-mtp3-prefix-vision/REPORT.md",
+    "sha256": "bacf6aed0a7a910f2dbbd1e35d82946b9951a518a2f10e2651c153ecc3858c25",
+    "availability": "Private source report; not included"
+  },
+  {
+    "record": "data/v032-48gb-gemma-20261028/chat-kv-comparison/REPORT.md",
+    "sha256": "7feccbea6a3d04846f943e05c3879fd5b62595f1b689b273e6cdb0b16b156d91",
+    "availability": "Private source report; not included"
+  },
+  {
+    "record": "data/v032-48gb-gemma-20261028/nvfp4-vision-boot-failure/REPORT.md",
+    "sha256": "b051babbcbf4c4666d88e7f487ebf09806f34c92d122011171839679d6c4b11e",
+    "availability": "Private source report; not included"
+  }
+]

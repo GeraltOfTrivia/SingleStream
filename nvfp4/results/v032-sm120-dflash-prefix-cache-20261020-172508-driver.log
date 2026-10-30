@@ -1,0 +1,9 @@
+START nvfp4 boot
+HEARTBEAT nvfp4 [prefix-cache]: boot | GPU 2.0 MiB | host 0.63 GB
+HEARTBEAT nvfp4 [prefix-cache]: boot | GPU 16718.0 MiB | host 3.27 GB
+HEARTBEAT nvfp4 [prefix-cache]: boot | GPU 18260.0 MiB | host 3.66 GB
+HEARTBEAT nvfp4 [prefix-cache]: boot | GPU 20682.0 MiB | host 3.85 GB
+HEARTBEAT nvfp4 [prefix-cache]: boot | GPU 20694.0 MiB | host 4.40 GB
+HEARTBEAT nvfp4 [prefix-cache]: boot | GPU 20954.0 MiB | host 4.48 GB
+DONE nvfp4 boot FAILED
+Prefix Caching Battery complete; servers stopped.

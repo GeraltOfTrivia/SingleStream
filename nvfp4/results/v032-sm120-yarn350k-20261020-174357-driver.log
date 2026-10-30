@@ -1,0 +1,57 @@
+START nvfp4 boot
+HEARTBEAT nvfp4: boot | GPU 2.0 MiB | host 1.35 GB
+HEARTBEAT nvfp4: boot | GPU 14708.0 MiB | host 6.01 GB
+HEARTBEAT nvfp4: boot | GPU 13580.0 MiB | host 13.93 GB
+HEARTBEAT nvfp4: boot | GPU 13800.0 MiB | host 14.15 GB
+HEARTBEAT nvfp4: boot | GPU 14032.0 MiB | host 14.69 GB
+HEARTBEAT nvfp4: boot | GPU 23340.0 MiB | host 13.13 GB
+DONE nvfp4 boot PASS
+START nvfp4 correctness-smoke
+DONE nvfp4 correctness-smoke PASS
+START nvfp4 kld-distribution
+DONE nvfp4 kld-distribution PASS
+START nvfp4 gsm8k-200-greedy
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23228.0 MiB | host 13.35 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+  GSM8K [greedy] 20/200: 19 correct, 1 truncated
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+  GSM8K [greedy] 40/200: 39 correct, 1 truncated
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+  GSM8K [greedy] 60/200: 58 correct, 2 truncated
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+  GSM8K [greedy] 80/200: 77 correct, 3 truncated
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.36 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+  GSM8K [greedy] 100/200: 94 correct, 5 truncated
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.36 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.36 GB
+  GSM8K [greedy] 120/200: 113 correct, 6 truncated
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.36 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.36 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.36 GB
+  GSM8K [greedy] 140/200: 133 correct, 6 truncated
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.36 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.36 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.36 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.36 GB
+  GSM8K [greedy] 160/200: 153 correct, 6 truncated
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.36 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.35 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.36 GB
+  GSM8K [greedy] 180/200: 172 correct, 7 truncated
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.36 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.36 GB
+HEARTBEAT nvfp4: gsm8k-200-greedy | GPU 23230.0 MiB | host 13.36 GB
+  GSM8K [greedy] 200/200: 189 correct, 9 truncated
+DONE nvfp4 gsm8k-200-greedy FAILED
+Stage 1 finished. Servers stopped; awaiting review.

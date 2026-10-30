@@ -1,0 +1,28 @@
+{
+  "arm": "nvfp4",
+  "backend": "FLASHINFER",
+  "gpu_uuid": "<GPU_UUID>",
+  "model": "<PROJECT_ROOT>/models/Qwen3.8-27B-NVFP4-RTX5090-pre-final",
+  "draft": "<PROJECT_ROOT>/models/Qwen3.8-27B-DFlash2-NVFP4-YourHighnessLA",
+  "spec": "dflash2",
+  "prefix_cache": true,
+  "gpu_util": "0.93",
+  "host_limit_bytes": 48000000000,
+  "compiler_concurrency": 4,
+  "tests": {
+    "boot": {
+      "status": "FAILED",
+      "error": "Boot exited 1; see server.log",
+      "elapsed_s": 165.02
+    }
+  },
+  "stack": "vLLM 0.32.0 / FlashInfer 0.7.0.post1 (Prefix Cache Enabled)",
+  "server_pid": 129887,
+  "blocked": "Boot failed",
+  "server_left_running": null,
+  "sampled_peak_gpu_mib": 23378.0,
+  "aggregate_scope_host_peak_bytes": 4549259264,
+  "memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+  "memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+  "status": "FAILED"
+}

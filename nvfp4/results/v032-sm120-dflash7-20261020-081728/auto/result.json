@@ -1,0 +1,263 @@
+{
+  "arm": "auto",
+  "stage": 1,
+  "backend": "FLASHINFER",
+  "gpu_uuid": "<GPU_UUID>",
+  "model": "<PROJECT_ROOT>/models/Qwen3.8-27B-W4A16-AutoRound-fast",
+  "spec": "dflash2",
+  "prefix_cache": false,
+  "gpu_util": "0.93",
+  "prefill_budget": 2048,
+  "max_seqs": 1,
+  "host_limit_bytes": 48000000000,
+  "compiler_concurrency": 4,
+  "tests": {
+    "boot": {
+      "status": "PASS",
+      "result": {
+        "max_model_len": 70784,
+        "models": {
+          "object": "list",
+          "data": [
+            {
+              "id": "qwen3.8-27b",
+              "object": "model",
+              "created": 1792473504,
+              "owned_by": "vllm",
+              "root": "<PROJECT_ROOT>/models/Qwen3.8-27B-W4A16-AutoRound-fast",
+              "parent": null,
+              "max_model_len": 70784,
+              "permission": [
+                {
+                  "id": "modelperm-83b0faf31df1d9bf",
+                  "object": "model_permission",
+                  "created": 1792473504,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ]
+            }
+          ]
+        },
+        "model_gib": 13.65,
+        "pool_tokens": 70970
+      },
+      "elapsed_s": 50.03
+    },
+    "correctness-smoke": {
+      "status": "PASS",
+      "result": {
+        "prompt": "sqrt(144)",
+        "response": "12",
+        "status": "PASS"
+      },
+      "elapsed_s": 0.18
+    },
+    "kld-distribution": {
+      "status": "PASS",
+      "result": {
+        "prompts_evaluated": 5,
+        "total_positions": 946
+      },
+      "elapsed_s": 1.9
+    },
+    "gsm8k-200-greedy": {
+      "status": "PASS",
+      "result": {
+        "n": 200,
+        "correct": 193,
+        "acc": 0.965,
+        "truncations": 7,
+        "mean_tokens": 379.57,
+        "profile": "greedy"
+      },
+      "elapsed_s": 605.51
+    },
+    "ppl-en": {
+      "status": "PASS",
+      "result": {
+        "ppl": 10.765219495744402,
+        "tokens": 11175,
+        "sum_logprob": -26555.381815094683
+      },
+      "elapsed_s": 14.35
+    },
+    "ppl-de": {
+      "status": "PASS",
+      "result": {
+        "ppl": 10.168649193308786,
+        "tokens": 11888,
+        "sum_logprob": -27571.94989226485
+      },
+      "elapsed_s": 15.15
+    },
+    "ppl-el": {
+      "status": "PASS",
+      "result": {
+        "ppl": 5.425076247494528,
+        "tokens": 17761,
+        "sum_logprob": -30034.418537932663
+      },
+      "elapsed_s": 21.22
+    },
+    "ppl-code": {
+      "status": "PASS",
+      "result": {
+        "ppl": 3.673333553026357,
+        "tokens": 7573,
+        "sum_logprob": -9853.22708044655
+      },
+      "elapsed_s": 9.68
+    },
+    "tg-greedy": {
+      "status": "PASS",
+      "result": {
+        "planned_passes": [
+          {
+            "output_tps": 70.9,
+            "ttft_ms": 214.42,
+            "tpot_ms": 13.69,
+            "decode_tps": 73.04601899196494
+          },
+          {
+            "output_tps": 70.84,
+            "ttft_ms": 218.1,
+            "tpot_ms": 13.7,
+            "decode_tps": 72.99270072992701
+          }
+        ],
+        "retained_pass": 2,
+        "output_tps": 70.84,
+        "ttft_ms": 218.1,
+        "tpot_ms": 13.7,
+        "decode_tps": 72.99270072992701,
+        "profile": {
+          "temperature": 0.0,
+          "top_p": 1.0,
+          "top_k": -1,
+          "min_p": 0.0,
+          "presence_penalty": 0.0,
+          "repetition_penalty": 1.0,
+          "enable_thinking": false
+        }
+      },
+      "elapsed_s": 237.66
+    },
+    "tg-instruct": {
+      "status": "PASS",
+      "result": {
+        "planned_passes": [
+          {
+            "output_tps": 62.45,
+            "ttft_ms": 223.02,
+            "tpot_ms": 15.52,
+            "decode_tps": 64.43298969072166
+          },
+          {
+            "output_tps": 61.04,
+            "ttft_ms": 212.25,
+            "tpot_ms": 15.92,
+            "decode_tps": 62.814070351758794
+          }
+        ],
+        "retained_pass": 2,
+        "output_tps": 61.04,
+        "ttft_ms": 212.25,
+        "tpot_ms": 15.92,
+        "decode_tps": 62.814070351758794,
+        "profile": {
+          "temperature": 0.7,
+          "top_p": 0.8,
+          "top_k": 20,
+          "min_p": 0.0,
+          "presence_penalty": 1.5,
+          "repetition_penalty": 1.0,
+          "enable_thinking": false
+        }
+      },
+      "elapsed_s": 270.16
+    },
+    "pp-1024": {
+      "status": "PASS",
+      "result": {
+        "trials": [
+          {
+            "elapsed_s": 1.0843935709999641,
+            "tps": 944.3065943813438
+          },
+          {
+            "elapsed_s": 1.0802251819995945,
+            "tps": 947.9504987140583
+          },
+          {
+            "elapsed_s": 1.042767575999278,
+            "tps": 982.0021484832868
+          }
+        ],
+        "median_tps": 947.9504987140583
+      },
+      "elapsed_s": 3.21
+    },
+    "pp-16384": {
+      "status": "PASS",
+      "result": {
+        "trials": [
+          {
+            "elapsed_s": 18.07155930600038,
+            "tps": 906.6179471607603
+          },
+          {
+            "elapsed_s": 17.681943931000205,
+            "tps": 926.5949526779896
+          },
+          {
+            "elapsed_s": 18.270143172000644,
+            "tps": 896.7636348416144
+          }
+        ],
+        "median_tps": 906.6179471607603
+      },
+      "elapsed_s": 54.02
+    },
+    "pp-65536": {
+      "status": "PASS",
+      "result": {
+        "trials": [
+          {
+            "elapsed_s": 87.48505450300036,
+            "tps": 749.0993790002433
+          },
+          {
+            "elapsed_s": 87.23521555200023,
+            "tps": 751.2447763820231
+          },
+          {
+            "elapsed_s": 87.27530754100007,
+            "tps": 750.8996742201459
+          }
+        ],
+        "median_tps": 750.8996742201459
+      },
+      "elapsed_s": 262.0
+    }
+  },
+  "stack": "vLLM 0.32.0 / FlashInfer 0.7.0.post1",
+  "server_pid": 27128,
+  "combined_ppl": {
+    "ppl": 6.976718079204808,
+    "tokens": 48397
+  },
+  "server_left_running": null,
+  "sampled_peak_gpu_mib": 21536.0,
+  "aggregate_scope_host_peak_bytes": 8862433280,
+  "memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+  "memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+  "status": "PASS"
+}

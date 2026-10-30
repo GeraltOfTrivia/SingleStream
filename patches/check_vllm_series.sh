@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Validate the patch series against a pristine checkout of the pinned vLLM.
+#
+# Two passes, because two tools are in play and they answer different questions:
+#
+#   1. Every patch, in the order of patches/series, applied by patches/apply.sh
+#      with GNU `patch` -- the tool that actually installs this stack.
+#   2. The contractual DFlash patches whose order and hunk metadata are checked
+#      with `git apply`, which is strict about offsets and catches a hand-edited
+#      hunk header immediately.
+#
+# Five patches are accepted by GNU patch and rejected by git apply once the
+# patches before them have moved their context. That is why pass 1 uses GNU
+# patch: the installed tree is produced by GNU patch, so GNU patch defines
+# "applies", and git apply stays on the five where hunk metadata is contractual.
+HERE="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+VLLM_SOURCE=${1:?usage: bash patches/check_vllm_series.sh /path/to/vllm-<pinned tag>/vllm  (the package directory inside the checkout, not its root)}
+VLLM_SOURCE=$(cd -- "$VLLM_SOURCE" && pwd)
+
+git -C "$VLLM_SOURCE" rev-parse --is-inside-work-tree >/dev/null
+
+# The patches address files relative to the installed vllm package, not to the
+# checkout root. `git apply` resolves a patch path against the REPOSITORY root
+# and silently skips ("Skipped patch '...'") anything outside the subdirectory
+# it runs in -- so running it from the package directory checked nothing at all
+# and reported OK. Run from the repository root and name the prefix explicitly.
+GIT_ROOT=$(git -C "$VLLM_SOURCE" rev-parse --show-toplevel)
+PREFIX=${VLLM_SOURCE#"$GIT_ROOT"/}
+if [ "$PREFIX" = "$VLLM_SOURCE" ]; then PREFIX=.; fi
+
+# patches/apply.sh owns the series: it reads the apply order, checks that it and the
+# patches/ directory agree exactly (exit 2 and each offender named, if not), and applies it.
+LIST=$(bash "$HERE/patches/apply.sh" --list)
+mapfile -t SERIES <<<"$LIST"
+
+echo "== pass 1: the whole series, GNU patch, patches/series order"
+git -C "$GIT_ROOT" checkout -q -- . && git -C "$GIT_ROOT" clean -qfd
+# The apply policy (--fuzz 0: an offset is benign and reported, fuzz fails by name) is written
+# down in patches/apply.sh, next to the code it describes.
+out=$(bash "$HERE/patches/apply.sh" "$VLLM_SOURCE" 2>&1) || {
+  printf '%s\n' "$out" | sed 's/^/   /'; exit 1
+}
+printf '%s\n' "$out" | grep 'at an offset' | sed 's/^== /   /' || true
+count=$(printf '%s\n' "$out" | grep -c '^== ' || true)
+offset=$(printf '%s\n' "$out" | grep -c 'at an offset' || true)
+if git -C "$GIT_ROOT" diff --quiet; then
+  echo "ERROR: the series applied but changed nothing -- the paths did not resolve." >&2
+  exit 1
+fi
+echo "   $count patches applied with exact context, $offset of them at an offset, 0 with fuzz"
+
+echo "== pass 2: the ordered DFlash patches, git apply --check"
+git -C "$GIT_ROOT" checkout -q -- . && git -C "$GIT_ROOT" clean -qfd
+CONTRACTUAL=(
+  vllm-pr50021-gdn-spec-bounds.patch
+  dflash2-prewarm.patch
+)
+PATCHES=()
+for name in "${SERIES[@]}"; do
+  for c in "${CONTRACTUAL[@]}"; do [ "$name" = "$c" ] && PATCHES+=("$name"); done
+done
+[ "${#PATCHES[@]}" -eq "${#CONTRACTUAL[@]}" ] || {
+  echo "ERROR: a contractual DFlash patch is missing from patches/series" >&2
+  exit 1
+}
+for name in "${PATCHES[@]}"; do
+  patch="$HERE/patches/$name"
+  echo "   git apply --check $name"
+  git -C "$GIT_ROOT" apply --check --whitespace=error -p1 --directory="$PREFIX" < "$patch"
+  git -C "$GIT_ROOT" apply --whitespace=error -p1 --directory="$PREFIX" < "$patch"
+done
+if git -C "$GIT_ROOT" diff --quiet; then
+  echo "ERROR: pass 2 applied but changed nothing." >&2
+  exit 1
+fi
+
+git -C "$GIT_ROOT" diff --check
+echo "patch integrity: OK"

@@ -1,0 +1,117 @@
+{
+  "arm": "auto",
+  "backend": "FLASHINFER",
+  "gpu_uuid": "<GPU_UUID>",
+  "model": "<PROJECT_ROOT>/models/Qwen3.8-27B-NVFP4-RTX5090-pre-final",
+  "draft": "",
+  "spec": "off",
+  "prefix_cache": true,
+  "gpu_util": "0.93",
+  "host_limit_bytes": 48000000000,
+  "compiler_concurrency": 4,
+  "tests": {
+    "boot": {
+      "status": "PASS",
+      "result": {
+        "max_model_len": 231200,
+        "models": {
+          "object": "list",
+          "data": [
+            {
+              "id": "qwen3.8-27b",
+              "object": "model",
+              "created": 1792505216,
+              "owned_by": "vllm",
+              "root": "<PROJECT_ROOT>/models/Qwen3.8-27B-NVFP4-RTX5090-pre-final",
+              "parent": null,
+              "max_model_len": 231200,
+              "permission": [
+                {
+                  "id": "modelperm-9d0608936a46ab5f",
+                  "object": "model_permission",
+                  "created": 1792505216,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ]
+            }
+          ]
+        },
+        "model_gib": 13.49,
+        "kv_gib": 7.24,
+        "pool_tokens": 231983
+      },
+      "elapsed_s": 190.04
+    },
+    "prefix-cold-32k": {
+      "status": "PASS",
+      "result": {
+        "elapsed_s": 14.778,
+        "prompt_tokens": 32779,
+        "completion_tokens": 18,
+        "cached_tokens": 0,
+        "text": "The quiet archive preserves ordinary records of weather, travel, books, and daily work."
+      },
+      "elapsed_s": 14.78
+    },
+    "prefix-warm-32k": {
+      "status": "PASS",
+      "result": {
+        "elapsed_s": 1.31,
+        "prompt_tokens": 32779,
+        "completion_tokens": 18,
+        "cached_tokens": 32000,
+        "speedup_ratio": 11.28,
+        "text": "The quiet archive preserves ordinary records of weather, travel, books, and daily work."
+      },
+      "elapsed_s": 1.31
+    },
+    "prefix-appended-turn": {
+      "status": "PASS",
+      "result": {
+        "elapsed_s": 0.86,
+        "prompt_tokens": 32820,
+        "cached_tokens": 32000,
+        "completion_tokens": 6,
+        "text": "Archive stores ordinary records."
+      },
+      "elapsed_s": 0.86
+    },
+    "prefix-mutated-early": {
+      "status": "PASS",
+      "result": {
+        "elapsed_s": 14.964,
+        "prompt_tokens": 32783,
+        "cached_tokens": 0,
+        "invalidation_verified": true
+      },
+      "elapsed_s": 14.96
+    },
+    "prefix-t0-parity": {
+      "status": "PASS",
+      "result": {
+        "cold_output": "The quiet archive preserves ordinary records of weather, travel, books, and daily work.",
+        "warm_output": "The quiet archive preserves ordinary records of weather, travel, books, and daily work.",
+        "exact_token_match": true
+      },
+      "elapsed_s": 0.0
+    }
+  },
+  "stack": "vLLM 0.32.0 / FlashInfer 0.7.0.post1 (Prefix Cache Enabled)",
+  "server_pid": 123388,
+  "admitted_context_tokens": 231200,
+  "kv_pool_tokens": 231983,
+  "server_left_running": null,
+  "sampled_peak_gpu_mib": 23226.0,
+  "aggregate_scope_host_peak_bytes": 10077376512,
+  "memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+  "memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+  "status": "PASS"
+}

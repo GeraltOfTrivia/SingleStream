@@ -1,0 +1,99 @@
+{
+  "scope": "vLLM 0.32.0 Prefix Caching Battery, SM120",
+  "gpu_uuid": "<GPU_UUID>",
+  "arms": {
+    "nvfp4": {
+      "arm": "nvfp4",
+      "backend": "FLASHINFER",
+      "gpu_uuid": "<GPU_UUID>",
+      "model": "<PROJECT_ROOT>/models/Qwen3.8-27B-NVFP4-RTX5090-pre-final",
+      "draft": "<PROJECT_ROOT>/models/Qwen3.8-27B-DFlash2-NVFP4-YourHighnessLA",
+      "spec": "dflash2",
+      "prefix_cache": true,
+      "gpu_util": "0.90",
+      "host_limit_bytes": 48000000000,
+      "compiler_concurrency": 4,
+      "tests": {
+        "boot": {
+          "status": "PASS",
+          "result": {
+            "max_model_len": 24832,
+            "models": {
+              "object": "list",
+              "data": [
+                {
+                  "id": "qwen3.8-27b",
+                  "object": "model",
+                  "created": 1792507128,
+                  "owned_by": "vllm",
+                  "root": "<PROJECT_ROOT>/models/Qwen3.8-27B-NVFP4-RTX5090-pre-final",
+                  "parent": null,
+                  "max_model_len": 24832,
+                  "permission": [
+                    {
+                      "id": "modelperm-90ac486f320c9ad8",
+                      "object": "model_permission",
+                      "created": 1792507128,
+                      "allow_create_engine": false,
+                      "allow_sampling": true,
+                      "allow_logprobs": true,
+                      "allow_search_indices": false,
+                      "allow_view": true,
+                      "allow_fine_tuning": false,
+                      "organization": "*",
+                      "group": null,
+                      "is_blocking": false
+                    }
+                  ]
+                }
+              ]
+            },
+            "model_gib": 17.19,
+            "kv_gib": 2.45,
+            "pool_tokens": 24967
+          },
+          "elapsed_s": 115.03
+        },
+        "prefix-cold-16384": {
+          "status": "PASS",
+          "result": {
+            "elapsed_s": 7.261,
+            "prompt_tokens": 16395,
+            "completion_tokens": 18,
+            "cached_tokens": 0,
+            "text": "The quiet archive stores ordinary records of weather, travel, books, and daily work."
+          },
+          "elapsed_s": 7.26
+        },
+        "prefix-warm-16384": {
+          "status": "PASS",
+          "result": {
+            "elapsed_s": 2.435,
+            "prompt_tokens": 16395,
+            "completion_tokens": 18,
+            "cached_tokens": 12416,
+            "speedup_ratio": 2.98,
+            "text": "The quiet archive preserves ordinary records of weather, travel, books, and daily work."
+          },
+          "elapsed_s": 2.43
+        },
+        "prefix-appended-turn": {
+          "status": "FAILED",
+          "error": "Expected multi-turn to preserve prefix cache (>=15384), got 12416",
+          "elapsed_s": 2.35
+        }
+      },
+      "stack": "vLLM 0.32.0 / FlashInfer 0.7.0.post1 (Prefix Cache Enabled)",
+      "server_pid": 133443,
+      "admitted_context_tokens": 24832,
+      "kv_pool_tokens": 24967,
+      "blocked": "Appended user turn failed",
+      "server_left_running": null,
+      "sampled_peak_gpu_mib": 23098.0,
+      "aggregate_scope_host_peak_bytes": 4688179200,
+      "memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+      "memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+      "status": "FAILED"
+    }
+  }
+}

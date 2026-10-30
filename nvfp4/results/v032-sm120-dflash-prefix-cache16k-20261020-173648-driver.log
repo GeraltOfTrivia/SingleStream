@@ -1,0 +1,14 @@
+START nvfp4 boot
+HEARTBEAT nvfp4 [prefix-cache]: boot | GPU 2.0 MiB | host 0.63 GB
+HEARTBEAT nvfp4 [prefix-cache]: boot | GPU 17058.0 MiB | host 3.29 GB
+HEARTBEAT nvfp4 [prefix-cache]: boot | GPU 22672.0 MiB | host 4.41 GB
+HEARTBEAT nvfp4 [prefix-cache]: boot | GPU 22550.0 MiB | host 4.41 GB
+DONE nvfp4 boot PASS
+START nvfp4 prefix-cold-16384
+DONE nvfp4 prefix-cold-16384 PASS
+START nvfp4 prefix-warm-16384
+HEARTBEAT nvfp4 [prefix-cache]: prefix-warm-16384 | GPU 22892.0 MiB | host 4.67 GB
+DONE nvfp4 prefix-warm-16384 PASS
+START nvfp4 prefix-appended-turn
+DONE nvfp4 prefix-appended-turn FAILED
+Prefix Caching Battery complete; servers stopped.
